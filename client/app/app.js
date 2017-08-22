@@ -6,7 +6,8 @@ angular.module('videoClubApp', [
     'ngResource', 
     'ngSanitize',
     'ui.router', 
-    'satellizer'
+    'satellizer',
+    'ngMaterial'
   ])
   .constant("API","http://localhost:8080/adsiEjemplo")
   .config(function($urlRouterProvider, $locationProvider,$authProvider,API) {
@@ -15,5 +16,5 @@ angular.module('videoClubApp', [
     // Config Satellizer
       $authProvider.loginUrl = API+'/api/auth/login';
       $authProvider.tokenName = 'token';
-      $authProvider.tokenPrefix = 'VideoClubAdsi';
+      $authProvider.tokenPrefix = 'VideoClubApp';
   });
